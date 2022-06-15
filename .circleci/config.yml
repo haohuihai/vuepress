@@ -15,7 +15,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      -run:
+      - run:
           name: Getting the Code
           command: |
             ls -al
