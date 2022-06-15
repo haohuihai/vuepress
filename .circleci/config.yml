@@ -16,7 +16,7 @@ jobs:
     steps:
       - checkout
       -run:
-          name: "Say hello"
+          name: Getting the Code
           command: |
             ls -al
             echo '^^^Your repo files ^^^'
