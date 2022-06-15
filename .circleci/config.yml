@@ -35,6 +35,6 @@ workflows:
       - Fetch-Code:
           requires:
             - Hello-word
-      -Using-Node:
-        requires:
-          - Fetch-Code
+      - Using-Node:
+          requires:
+            - Fetch-Code
