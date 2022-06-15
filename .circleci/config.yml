@@ -31,10 +31,10 @@ jobs:
 workflows:
   Example-Workflow:
     jobs:
-      - Hello-World
+      - Hello-word
       - Fetch-Code:
           requires:
-            - Hello-Word
+            - Hello-word
       -Using-Node:
         requires:
           - Fetch-Code
