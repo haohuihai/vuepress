@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cimg/node:17.2
+      - image: cimg/node:14.17
     branches:
       only:
         - main
@@ -13,9 +13,16 @@ jobs:
       - checkout
       - run: echo "A first hello"
       - run: yarn -v
+      - restore_cache:
+          keys:
+            - dependencies_circle_demo
       - run:
           name: Install
           command: yarn
+      - save_cache:
+          paths:
+            - node_modules
+          key: dependencies_circle_demo
       - run: 
           name: Build
           command: yarn build
