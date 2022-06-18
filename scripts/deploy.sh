@@ -33,7 +33,7 @@ fi
 
 # 把构建好的文件目录给拷贝进来
 # cp -a "../${siteSource}/." .
-cp -a '../docs/dist/.'
+cp -a '../docs/dist/.' .
 ls -la
 
 # 把所有的文件添加到git
