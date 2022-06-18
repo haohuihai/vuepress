@@ -20,7 +20,7 @@ git remote add --fetch origin "$remote"
 
 echo 'email is: '$GH_EMAIL
 echo 'name is: '$GH_NAME
-echo 'sitesource is: '$siteSource
+# echo 'sitesource is: '$siteSource
 
 # 切换gh-pages分支
 if git rev-parse --verify origin/gh-pages >/dev/null 2>&1; then
@@ -32,8 +32,8 @@ else
 fi
 
 # 把构建好的文件目录给拷贝进来
-cp -a "../${siteSource}/." .
-
+# cp -a "../${siteSource}/." .
+cp -a '../docs/dist/.'
 ls -la
 
 # 把所有的文件添加到git
